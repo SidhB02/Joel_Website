@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Ration Distribution System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <a href="#home">
+                        <img src="logo.png" alt="Project Logo" class="logo-image">
+                    </a>
+                </li>
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About &#9662;</a> <!-- Dropdown arrow -->
+                    <ul class="dropdown-content">
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#parts-used">Parts Used</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#results">Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Automated Ration Distribution System</h1>
+        <p>Empowering Communities, One Ration at a Time.</p>
+    </section>
+
+    <!-- About the Project -->
+    <section id="about" class="about-section">
+        <h2>About the Project</h2>
+
+        <!-- Overview -->
+        <section id="overview" class="overview-section">
+            <h3>Overview</h3>
+            <p>The primary objective of this project is to develop a reliable, efficient, and user-friendly system for distributing rations to
+                communities, particularly in areas where traditional methods may fall short. By automating the ration distribution process, the
+                system aims to enhance accessibility, reduce waste, and eliminate any form of malpractice in the distribution to those in need.</p>
+        </section>
+
+        <!-- Parts Used -->
+        <section id="parts-used" class="parts-used-section">
+            <h3>Parts Used</h3>
+            <div class="parts-container">
+                <div class="part">
+                    <h4>Arduino</h4>
+                    <img src="Arduino.png" alt="Arduino" class="part-image">
+                    <p>An open-source microcontroller for various embedded applications.</p>
+                </div>
+                <div class="part">
+                    <h4>Raspberry Pi</h4>
+                    <img src="RPI.png" alt="Raspberry Pi" class="part-image">
+                    <p>A compact computer for running automation tasks.</p>
+                </div>
+                <div class="part">
+                    <h4>RFID Scanner</h4>
+                    <img src="RFID.png" alt="RFID Scanner" class="part-image">
+                    <p>Used for secure user authentication.</p>
+                </div>
+                <div class="part">
+                    <h4>LCD with I2C</h4>
+                    <img src="LCD_I2C.png" alt="LCD with I2C" class="part-image">
+                    <p>Displays system messages efficiently.</p>
+                </div>
+                <div class="part">
+                    <h4>DC Motor</h4>
+                    <img src="DC_Motor.png" alt="DC Motor" class="part-image">
+                    <p>Used in the dispensing mechanism.</p>
+                </div>
+                <div class="part">
+                    <h4>Load Cell with HX711</h4>
+                    <img src="LoadCell_HX711.png" alt="Load Cell" class="part-image">
+                    <p>Used in the weight measurement.</p>
+                </div>
+            </div>
+        </section>        
+
+        <!-- Process Section -->
+        <section id="process" class="process-section">
+            <h3>Process</h3>
+            <h4>User Registration and Authentication</h4>
+            <p>Users authenticate themselves using an RFID tag.</p>
+            <p>The system scans the tag, verifies the details against a central database, and confirms user eligibility.</p>
+
+            <h4>Ration Distribution Process</h4>
+            <p>Upon successful verification, the system prompts the user to enter the amount of rice they wish to receive.</p>
+            <p>Once the user specifies the amount, the dispensing mechanism, controlled by a DC motor, starts dispensing rice.</p>
+            <p>A load cell continuously measures the weight of the dispensed rice in real-time.</p>
+            <p>When the specified weight is reached, the system automatically stops the DC motor, ensuring accurate distribution.</p>
+        </section>
+
+
+        <!-- Impact
+        <section id="results" class="results-section">
+            <h3>Impact</h3>
+            <p>Improving efficiency, transparency, and accessibility in ration distribution.</p>
+        </section>
+    </section> -->
+        <!-- Impact Section -->
+        <section id="results" class="results-section">
+            <h3>Impact</h3>
+
+            <h4>Improved Efficiency in Ration Distribution</h4>
+            <p>Automation of the ration distribution process reduces manual intervention, ensuring a faster and more efficient system.</p>
+            <p>Users can input their required amount of rice, and the system accurately dispenses it using a DC motor and load cell, minimizing wastage.</p>
+
+            <h4>Increased Transparency and Accountability</h4>
+            <p>Elimination of Middlemen: Direct dispensing through the automated system prevents unauthorized distribution and corruption.</p>
+            <p>Real-Time Monitoring: The load cell continuously measures the dispensed weight, ensuring that users receive the exact amount they requested.</p>
+            <p>Secure Authentication: RFID-based authentication ensures that only registered users can access the system, reducing fraud and identity misuse.</p>
+
+            <h4>Enhanced Security Against Tampering</h4>
+            <p>The load cell mechanism is controlled entirely via software, preventing external tampering. This ensures that weight measurement remains accurate and cannot be manipulated manually.</p>
+
+            <h4>Better Accessibility and Equity</h4>
+            <p>The system allows fair distribution by ensuring that all eligible users receive their entitled rations without bias.</p>
+            <p>Automated tracking helps authorities identify underserved areas and ensure equitable distribution.</p>
+
+            <h4>Cost Savings and Resource Optimization</h4>
+            <p>Automated dispensing prevents excess distribution and reduces losses, optimizing resource allocation.</p>
+            <p>Real-time data collection allows authorities to analyze consumption patterns and make informed policy decisions.</p>
+
+            <h4>Technological Advancement and Public Trust</h4>
+            <p>By leveraging RFID, load cells, and automated dispensing, the system promotes digital inclusion and technological adoption in public welfare.</p>
+            <p>The transparency of automated transactions builds trust among beneficiaries, ensuring confidence in the ration distribution system.</p>
+        </section>
+
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <h3>Siddharth Rao</h3>
+                <p><a href="mailto:siddraok@gmail.com">siddraok@gmail.com</a></p>
+            </div>
+            <div class="team-member">
+                <h3>Siddharth Bhat</h3>
+                <p><a href="mailto:sidhb0222@gmail.com">sidhb0222@gmail.com</a></p>
+            </div>
+            <div class="team-member">
+                <h3>Shreyas Pai</h3>
+                <p><a href="mailto:Shreypai30@gmail.com">Shreypai30@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Automated Ration Distribution System. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

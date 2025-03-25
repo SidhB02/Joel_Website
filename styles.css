@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: white;
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #005f99; /* Blue */
+    padding: 10px 0;
+    position: fixed; /* Keep the header fixed on scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+.logo img {
+    width: 40px; /* Reduced size from 50px to 40px */
+    height: auto;
+    display: block;
+}
+
+/* Navigation Bar Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 0px; /* Ensure space for the logo */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.6s ease, transform 0.6s ease;
+}
+
+nav ul li a:hover {
+    color: #800080; /* Purple accent on hover */
+    transform: scale(1.2);
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #005f99; /* Blue background for dropdown */
+    min-width: 160px;
+    z-index: 1;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    text-align: center;
+}
+
+.dropdown-content li a {
+    padding: 2px 5px;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #005f99; /* Blue */
+    color: white;
+    padding: 280px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.3em;
+}
+
+.hero p {
+    font-size: 1.7em;
+}
+
+/* Typing Effect for Hero Section */
+.typing {
+    font-family: Arial, sans-serif;
+    border-right: 3px solid;
+    width: 46ch; /* Adjusted to fit full text */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(46), blink .75s step-end infinite;
+    margin: 0 auto; /* Centers the text */
+    display: inline-block; /* Ensures proper centering */
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 46ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Adjust spacing for sections because of fixed header */
+.about-section,
+.overview-section,
+.parts-used-section,
+.process-section,
+.results-section,
+.team-section {
+    margin-top: 2px; /* Add margin so sections don't hide behind the fixed header */
+}
+
+/* Alternate colors for main sections */
+.about-section {
+    background-color: white;
+    color: #005f99;
+}
+
+.overview-section {
+    background-color: #005f99;
+    color: white;
+}
+
+.parts-used-section {
+    background-color: #800080;
+    color: #ffffff;
+}
+
+.process-section {
+    background-color: #005f99;
+    color: white;
+}
+
+.results-section {
+    background-color: #800080;
+    color: white;
+}
+
+.team-section {
+    background-color: white;
+    color: #005f99;
+}
+
+/* Parts Used Section */
+.parts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.part {
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.part:hover {
+    transform: scale(1.05);
+}
+
+.part-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.part-image:hover {
+    transform: scale(1.1);
+}
+
+/* Team Section */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #005f99;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-left: 0; /* Align back when stacked */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .parts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+
+    .team-photo {
+        width: 80px;
+        height: 80px;
+    }
+}
